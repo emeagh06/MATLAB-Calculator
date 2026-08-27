@@ -1,0 +1,432 @@
+classdef app1 < matlab.apps.AppBase
+
+    % Properties that correspond to app components
+    properties (Access = public)
+        UIFigure              matlab.ui.Figure
+        Lamp                  matlab.ui.control.Lamp
+        Clear                 matlab.ui.control.Button
+        AnswerEditFieldLabel  matlab.ui.control.Label
+        Sqrt                  matlab.ui.control.Button
+        Number_6              matlab.ui.control.Button
+        Number_5              matlab.ui.control.Button
+        Number_4              matlab.ui.control.Button
+        Enter                 matlab.ui.control.Button
+        Square                matlab.ui.control.Button
+        Divide                matlab.ui.control.Button
+        Decimal               matlab.ui.control.Button
+        Number_3              matlab.ui.control.Button
+        Number_0              matlab.ui.control.Button
+        Negative              matlab.ui.control.Button
+        Number_9              matlab.ui.control.Button
+        Number_2              matlab.ui.control.Button
+        Number_1              matlab.ui.control.Button
+        Multiplication        matlab.ui.control.Button
+        Number_8              matlab.ui.control.Button
+        Number_7              matlab.ui.control.Button
+        Subtract              matlab.ui.control.Button
+        AnswerEditField       matlab.ui.control.EditField
+        Add                   matlab.ui.control.Button
+    end
+
+    % Callbacks that handle component events
+    methods (Access = private)
+
+        % Button pushed function: Number_1
+        function ButtonOnePushed(app, event)
+           current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "1";
+           else
+               app.AnswerEditField.Value = current + "1";
+           end
+        end
+
+        % Button pushed function: Number_2
+        function ButtonTwoPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "2";
+           else
+               app.AnswerEditField.Value = current + "2";
+           end
+        end
+
+        % Button pushed function: Number_3
+        function ButtonThreePushed(app, event)
+            current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "3";
+           else
+               app.AnswerEditField.Value = current + "3";
+           end
+        end
+
+        % Button pushed function: Number_4
+        function ButtonFourPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "4";
+           else
+               app.AnswerEditField.Value = current + "4";
+           end
+        end
+
+        % Button pushed function: Number_5
+        function ButtonFivePushed(app, event)
+            current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "5";
+           else
+               app.AnswerEditField.Value = current + "5";
+           end
+        end
+
+        % Button pushed function: Number_6
+        function ButtonSixPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "6";
+           else
+               app.AnswerEditField.Value = current + "6";
+           end
+        end
+
+        % Button pushed function: Number_7
+        function ButtonSevenPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "7";
+           else
+               app.AnswerEditField.Value = current + "7";
+           end
+        end
+
+        % Button pushed function: Number_8
+        function ButtonEightPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "8";
+           else
+               app.AnswerEditField.Value = current + "8";
+           end
+        end
+
+        % Button pushed function: Number_9
+        function ButtonNinePushed(app, event)
+            current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "9";
+           else
+               app.AnswerEditField.Value = current + "9";
+           end
+        end
+
+        % Button pushed function: Number_0
+        function ButtonZeroPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+           if current == "0"
+               app.AnswerEditField.Value = "0";
+           else
+               app.AnswerEditField.Value = current + "0";
+           end
+        end
+
+        % Button pushed function: Decimal
+        function ButtonDecimalPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+            if current == "0"
+                app.AnswerEditField.Value = ".";
+            else
+                app.AnswerEditField.Value = current + ".";
+            end
+        end
+
+        % Button pushed function: Negative
+        function ButtonNegativePushed(app, event)
+            current = string(app.AnswerEditField.Value);
+            if current == "0"
+                app.AnswerEditField.Value = "-";
+            else
+                app.AnswerEditField.Value = current + "-";
+            end
+        end
+
+        % Button pushed function: Add
+        function AddAdditionPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+            if current == "0"
+                app.AnswerEditField.Value = "+";
+            else
+                app.AnswerEditField.Value = current + "+";
+            end
+        end
+
+        % Button pushed function: Subtract
+        function ButtonSubtractionPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+            if current == "0"
+                app.AnswerEditField.Value = "-";
+            else
+                app.AnswerEditField.Value = current + "-";
+            end
+        end
+
+        % Button pushed function: Multiplication
+        function ButtonMultiplicationPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+            if current == "0"
+                app.AnswerEditField.Value = "*";
+            else
+                app.AnswerEditField.Value = current + "*";
+            end
+        end
+
+        % Button pushed function: Divide
+        function ButtonDivisionPushed(app, event)
+            current = string(app.AnswerEditField.Value);
+            if current == "0"
+                app.AnswerEditField.Value = "/";
+            else
+                app.AnswerEditField.Value = current + "/";
+            end
+        end
+
+        % Button pushed function: Square
+        function ButtonSquarePushed(app, event)
+            current = string(app.AnswerEditField.Value);
+            if current == "0"
+                app.AnswerEditField.Value = "^2";
+            else
+                app.AnswerEditField.Value = current + "^2";
+            end
+        end
+
+        % Button pushed function: Sqrt
+        function ButtonSqrtPushed(app, event)
+            expr = app.AnswerEditField.Value;
+            try
+                value = evalin('base', expr);
+
+                if isnumeric(value) && isscalar(value)
+                    result = sqrt(value);
+                    app.AnswerEditField.Value = string(result);
+                else 
+                    app.AnswerEditField.Value = "Error";
+                end
+            catch
+                app.AnswerEditField.Value = "Error";
+            end
+        end
+
+        % Button pushed function: Enter
+        function ButtonEnterPushed(app, event)
+            expr = app.AnswerEditField.Value;  % get the text from the display
+            try
+                % Evaluate the expression 
+                result = eval(expr);
+                app.AnswerEditField.Value = string(result);
+            catch
+                % Show error if expression is invalid
+                app.AnswerEditField.Value = "Error";
+            end
+        end
+
+        % Close request function: UIFigure
+        function ButtonLamp(app, event)
+
+            expr = app.AnswerEditField.Value;
+            try
+                result = eval(expr);
+                app.AnswerEditField.Value = string(result);
+                app.Lamp.Color = [0 1 0];
+            catch
+                app.AnswerEditField.Value = "Error";
+                app.Lamp.Color = [1 0 0];
+            end
+        end
+
+        % Button pushed function: Clear
+        function ButtonClearPushed(app, event)
+            app.AnswerEditField.Value = "0";
+            app.Lamp.Color = [0.5 0.5 0.5];
+        end
+    end
+
+    % Component initialization
+    methods (Access = private)
+
+        % Create UIFigure and components
+        function createComponents(app)
+
+            % Create UIFigure and hide until all components are created
+            app.UIFigure = uifigure('Visible', 'off');
+            app.UIFigure.Position = [100 100 640 480];
+            app.UIFigure.Name = 'MATLAB App';
+            app.UIFigure.CloseRequestFcn = createCallbackFcn(app, @ButtonLamp, true);
+
+            % Create Add
+            app.Add = uibutton(app.UIFigure, 'push');
+            app.Add.ButtonPushedFcn = createCallbackFcn(app, @AddAdditionPushed, true);
+            app.Add.Position = [211 330 49 49];
+            app.Add.Text = '+';
+
+            % Create AnswerEditField
+            app.AnswerEditField = uieditfield(app.UIFigure, 'text');
+            app.AnswerEditField.Tag = 'EditField';
+            app.AnswerEditField.HorizontalAlignment = 'right';
+            app.AnswerEditField.Position = [211 393 271 52];
+
+            % Create Subtract
+            app.Subtract = uibutton(app.UIFigure, 'push');
+            app.Subtract.ButtonPushedFcn = createCallbackFcn(app, @ButtonSubtractionPushed, true);
+            app.Subtract.Position = [285 330 49 49];
+            app.Subtract.Text = '-';
+
+            % Create Number_7
+            app.Number_7 = uibutton(app.UIFigure, 'push');
+            app.Number_7.ButtonPushedFcn = createCallbackFcn(app, @ButtonSevenPushed, true);
+            app.Number_7.Position = [211 266 49 49];
+            app.Number_7.Text = '7';
+
+            % Create Number_8
+            app.Number_8 = uibutton(app.UIFigure, 'push');
+            app.Number_8.ButtonPushedFcn = createCallbackFcn(app, @ButtonEightPushed, true);
+            app.Number_8.Position = [285 266 49 49];
+            app.Number_8.Text = '8';
+
+            % Create Multiplication
+            app.Multiplication = uibutton(app.UIFigure, 'push');
+            app.Multiplication.ButtonPushedFcn = createCallbackFcn(app, @ButtonMultiplicationPushed, true);
+            app.Multiplication.Position = [359 330 49 49];
+            app.Multiplication.Text = 'x';
+
+            % Create Number_1
+            app.Number_1 = uibutton(app.UIFigure, 'push');
+            app.Number_1.ButtonPushedFcn = createCallbackFcn(app, @ButtonOnePushed, true);
+            app.Number_1.Position = [211 138 49 49];
+            app.Number_1.Text = '1';
+
+            % Create Number_2
+            app.Number_2 = uibutton(app.UIFigure, 'push');
+            app.Number_2.ButtonPushedFcn = createCallbackFcn(app, @ButtonTwoPushed, true);
+            app.Number_2.Position = [285 138 49 49];
+            app.Number_2.Text = '2';
+
+            % Create Number_9
+            app.Number_9 = uibutton(app.UIFigure, 'push');
+            app.Number_9.ButtonPushedFcn = createCallbackFcn(app, @ButtonNinePushed, true);
+            app.Number_9.Position = [359 266 49 49];
+            app.Number_9.Text = '9';
+
+            % Create Negative
+            app.Negative = uibutton(app.UIFigure, 'push');
+            app.Negative.ButtonPushedFcn = createCallbackFcn(app, @ButtonNegativePushed, true);
+            app.Negative.Position = [211 74 49 49];
+            app.Negative.Text = '(-)';
+
+            % Create Number_0
+            app.Number_0 = uibutton(app.UIFigure, 'push');
+            app.Number_0.ButtonPushedFcn = createCallbackFcn(app, @ButtonZeroPushed, true);
+            app.Number_0.Position = [285 74 49 49];
+            app.Number_0.Text = '0';
+
+            % Create Number_3
+            app.Number_3 = uibutton(app.UIFigure, 'push');
+            app.Number_3.ButtonPushedFcn = createCallbackFcn(app, @ButtonThreePushed, true);
+            app.Number_3.Position = [359 138 49 49];
+            app.Number_3.Text = '3';
+
+            % Create Decimal
+            app.Decimal = uibutton(app.UIFigure, 'push');
+            app.Decimal.ButtonPushedFcn = createCallbackFcn(app, @ButtonDecimalPushed, true);
+            app.Decimal.Position = [359 74 49 49];
+            app.Decimal.Text = '.';
+
+            % Create Divide
+            app.Divide = uibutton(app.UIFigure, 'push');
+            app.Divide.ButtonPushedFcn = createCallbackFcn(app, @ButtonDivisionPushed, true);
+            app.Divide.Position = [433 330 49 49];
+            app.Divide.Text = '/';
+
+            % Create Square
+            app.Square = uibutton(app.UIFigure, 'push');
+            app.Square.ButtonPushedFcn = createCallbackFcn(app, @ButtonSquarePushed, true);
+            app.Square.Position = [433 266 49 49];
+            app.Square.Text = '^2';
+
+            % Create Enter
+            app.Enter = uibutton(app.UIFigure, 'push');
+            app.Enter.ButtonPushedFcn = createCallbackFcn(app, @ButtonEnterPushed, true);
+            app.Enter.Position = [433 74 49 113];
+            app.Enter.Text = 'Enter';
+
+            % Create Number_4
+            app.Number_4 = uibutton(app.UIFigure, 'push');
+            app.Number_4.ButtonPushedFcn = createCallbackFcn(app, @ButtonFourPushed, true);
+            app.Number_4.Position = [211 201 49 49];
+            app.Number_4.Text = '4';
+
+            % Create Number_5
+            app.Number_5 = uibutton(app.UIFigure, 'push');
+            app.Number_5.ButtonPushedFcn = createCallbackFcn(app, @ButtonFivePushed, true);
+            app.Number_5.Position = [285 201 49 49];
+            app.Number_5.Text = '5';
+
+            % Create Number_6
+            app.Number_6 = uibutton(app.UIFigure, 'push');
+            app.Number_6.ButtonPushedFcn = createCallbackFcn(app, @ButtonSixPushed, true);
+            app.Number_6.Position = [359 201 49 49];
+            app.Number_6.Text = '6';
+
+            % Create Sqrt
+            app.Sqrt = uibutton(app.UIFigure, 'push');
+            app.Sqrt.ButtonPushedFcn = createCallbackFcn(app, @ButtonSqrtPushed, true);
+            app.Sqrt.Position = [433 201 49 49];
+            app.Sqrt.Text = 'Sqrt';
+
+            % Create AnswerEditFieldLabel
+            app.AnswerEditFieldLabel = uilabel(app.UIFigure);
+            app.AnswerEditFieldLabel.HorizontalAlignment = 'right';
+            app.AnswerEditFieldLabel.Position = [151 423 45 22];
+            app.AnswerEditFieldLabel.Text = 'Answer';
+
+            % Create Clear
+            app.Clear = uibutton(app.UIFigure, 'push');
+            app.Clear.ButtonPushedFcn = createCallbackFcn(app, @ButtonClearPushed, true);
+            app.Clear.Position = [508 330 49 49];
+            app.Clear.Text = 'C';
+
+            % Create Lamp
+            app.Lamp = uilamp(app.UIFigure);
+            app.Lamp.Position = [515 401 36 36];
+
+            % Show the figure after all components are created
+            app.UIFigure.Visible = 'on';
+        end
+    end
+
+    % App creation and deletion
+    methods (Access = public)
+
+        % Construct app
+        function app = app1
+
+            % Create UIFigure and components
+            createComponents(app)
+
+            % Register the app with App Designer
+            registerApp(app, app.UIFigure)
+
+            if nargout == 0
+                clear app
+            end
+        end
+
+        % Code that executes before app deletion
+        function delete(app)
+
+            % Delete UIFigure when app is deleted
+            delete(app.UIFigure)
+        end
+    end
+end
